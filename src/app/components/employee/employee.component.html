@@ -1,0 +1,27 @@
+<div class="row" *ngIf="listaEmpleados">
+    <div class="col-4 mt-5" *ngFor="let empleado of listaEmpleados"  >
+        <div class="card" >
+          <img *ngIf="empleado.sex=='m'" src="assets/images/men-character.gif" class="card-img-top" alt="...">
+          <img *ngIf="empleado.sex=='f'" src="assets/images/woman-character.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{empleado.name}}</h5>
+              <p class="card-text">{{empleado.office}}</p>
+              <p class="card-text">{{empleado.position}}</p>
+              <p class="card-text">{{empleado.salary}}</p>
+            </div>
+          </div>
+    </div>
+</div>
+<div class="row" *ngIf="listaRickandMorty">
+  <div class="col-4 mt-5" *ngFor="let personaje of listaRickandMorty"  >
+      <div class="card" >
+        <img [src]="personaje.image" class="card-img-top" alt="...">
+       
+          <div class="card-body">
+            <h5 class="card-title">{{personaje.name}}</h5>
+            <p class="card-text">{{personaje.gender}}</p>
+            
+          </div>
+        </div>
+  </div>
+</div>
